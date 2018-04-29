@@ -1,0 +1,30 @@
+﻿@model List<BNE.Test.Domain.Ticket>
+
+@{
+  ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+  @Html.AntiForgeryToken()
+
+  <div class="form-horizontal">
+    <h4>Tickets</h4>
+    <hr />
+
+    @foreach (var item in Model)
+    {
+    <p>
+      @item.Id -
+      @item.FirstNumber -
+      @item.SecondNumber -
+      @item.ThirdNumber -
+      @item.ForthNumber -
+      @item.FifthNumber -
+      @item.SixthNumber
+    </p>
+    }
+</div>
+}
